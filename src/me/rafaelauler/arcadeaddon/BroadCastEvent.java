@@ -41,7 +41,7 @@ private BukkitTask task;
 private String startingmessage = "&eA game room of %1 with id %2 is about to start with %3 players. Click here to join it!";
 @Setting("startmessage")	
 private String startmessage = "&eA game room of %1 with id %2 started with %3 players.";
-@Setting("Sound")
+@Setting("sound")
 private Sound sound = Sound.ENTITY_ARROW_HIT_PLAYER;
 @Setting("worlds")
 private Set<String> lobbyworlds = new HashSet<>(List.of("enabled-worlds"));
