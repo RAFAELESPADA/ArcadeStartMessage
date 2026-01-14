@@ -41,8 +41,8 @@ private BukkitTask task;
 private String startingmessage = "&eA game room of %1 with id %2 is about to start with %3 players. Click here to join it!";
 @Setting("startmessage")	
 private String startmessage = "&eA game room of %1 with id %2 started with %3 players.";
-@Setting("Sound")	
-private String sound = "ENTITY_ARROW_HIT_PLAYER";
+@Setting("Sound")
+private Sound sound = Sound.ENTITY_ARROW_HIT_PLAYER;
 @Setting("worlds")
 private Set<String> lobbyworlds = new HashSet<>(List.of("enabled-worlds"));
 
@@ -66,7 +66,7 @@ public void onDeatht(GameJoinEvent event)
         		               	    for (Player p1 : lobbyWorld.getPlayers()) {
         		               	        p1.spigot().sendMessage(txt);
         		               	        HelixActionBar.send(p1, msg);
-        		               	        p1.playSound(p1.getLocation(), Sound.valueOf(sound), 10f, 1f);
+        		               	        p1.playSound(p1.getLocation(), sound, 10f, 1f);
         		               	    }    
         		               	 countdown--;
         		            },
@@ -89,7 +89,7 @@ public void onDeathytt(GameStartEvent event) {
 	               	    for (Player p1 : lobbyWorld.getPlayers()) {
 	               	        p1.spigot().sendMessage(txt);
 	               	        HelixActionBar.send(p1, msg);
-	               	        p1.playSound(p1.getLocation(), Sound.valueOf(sound), 10f, 1f);
+	               	        p1.playSound(p1.getLocation(), sound, 10f, 1f);
 	               	    }     
 	          }
 	}
